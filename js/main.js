@@ -50,7 +50,7 @@ for (let i = 0; i < teamMembers.length; i++) {
     if (key === 'foto')
       image.innerHTML += `<img src="img/${teamMembers[i][key]}" alt="img${i}"></img>`;
     else if (key === 'nome')
-      caption.innerHTML += `<h3>${teamMembers[i][key]}</h2>`;
+      caption.innerHTML += `<h3>${teamMembers[i][key]}</h3>`;
     else caption.innerHTML += `${teamMembers[i][key]}`;
   }
   member.append(image);
