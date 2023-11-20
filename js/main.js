@@ -43,5 +43,5 @@ for (let i = 0; i < teamMembers.length; i++) {
   for (let key in teamMembers[i]) {
     container.innerHTML += `${teamMembers[i][key]} `;
   }
-  container.innerHTML += '<br>'; // Aggiungi un salto di riga tra i nomi dei membri del team
+  container.innerHTML += '<br>';
 }
