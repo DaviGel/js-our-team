@@ -1,8 +1,14 @@
+/* #region RESET */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* #endregion */
+
+/* #region COMMON */
 
 .container {
   margin: 100px auto;
@@ -35,23 +41,31 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.members {
+/* #endregion */
+
+/* #region MAIN */
+
+main .members {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.member {
+main .member {
   width: calc(100% / 3 - 20px);
 }
 
-.caption {
+main .caption {
   text-align: center;
   padding: 25px;
   background-color: #ffffff;
   color: #67615a;
 }
+
+/* #endregion */
+
+/* #region MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
   .member {
@@ -64,3 +78,5 @@ p {
     width: 100%;
   }
 }
+
+/* #endregion */
