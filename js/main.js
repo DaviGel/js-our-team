@@ -41,8 +41,8 @@ const members = document.querySelector('.members');
 
 for (let i = 0; i < teamMembers.length; i++) {
   const member = document.createElement('div');
-  let image = document.createElement('div');
-  let caption = document.createElement('div');
+  const image = document.createElement('div');
+  const caption = document.createElement('div');
   member.classList.add('member');
   image.classList.add('image');
   caption.classList.add('caption');
