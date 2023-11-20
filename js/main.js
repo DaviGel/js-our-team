@@ -1,5 +1,7 @@
 'use strict';
 
+/* Variables */
+
 const teamMembers = [
   {
     nome: 'Wayne Barnett',
@@ -33,6 +35,10 @@ const teamMembers = [
   },
 ];
 
+const container = document.querySelector('.container');
+
+/* Program */
+
 for (let i = 0; i < teamMembers.length; i++) {
-  for (let key in teamMembers[i]) console.log(teamMembers[i][key]);
+  for (let key in teamMembers[i]) container.append(teamMembers[i][key]);
 }
