@@ -4,48 +4,56 @@
 
 const teamMembers = [
   {
+    foto: 'wayne-barnett-founder-ceo.jpg',
     nome: 'Wayne Barnett',
     ruolo: 'Founder & CEO',
-    foto: 'wayne-barnett-founder-ceo.jpg',
   },
   {
+    foto: 'angela-caroll-chief-editor.jpg',
     nome: 'Angela Caroll',
     ruolo: 'Chief Editor',
-    foto: 'angela-caroll-chief-editor.jpg',
   },
   {
+    foto: 'walter-gordon-office-manager.jpg',
     nome: 'Walter Gordon',
     ruolo: 'Office Manager',
-    foto: 'walter-gordon-office-manager.jpg',
   },
   {
+    foto: 'angela-lopez-social-media-manager.jpg',
     nome: 'Angela Lopez Gordon',
     ruolo: 'Social Media Manager',
-    foto: 'angela-lopez-social-media-manager.jpg',
   },
   {
+    foto: 'scott-estrada-developer.jpg',
     nome: 'Scott Estrada',
     ruolo: 'Developer',
-    foto: 'scott-estrada-developer.jpg',
   },
   {
+    foto: 'barbara-ramos-graphic-designer.jpg',
     nome: 'Barbara Ramos',
     ruolo: 'Graphic Designer',
-    foto: 'barbara-ramos-graphic-designer.jpg',
   },
 ];
 
-const container = document.querySelector('.container');
+const members = document.querySelector('.members');
 
 /* Program */
 
 for (let i = 0; i < teamMembers.length; i++) {
+  const member = document.createElement('div');
+  let image = document.createElement('div');
+  let caption = document.createElement('div');
+  member.classList.add('member');
+  image.classList.add('image');
+  caption.classList.add('caption');
   for (let key in teamMembers[i]) {
-    if (key === 'foto') {
-      container.innerHTML += `<img src="img/${teamMembers[i][key]}" alt="img${i}"></img>`;
-    } else {
-      container.innerHTML += `${teamMembers[i][key]} `;
-    }
-    container.innerHTML += '<br>';
+    if (key === 'foto')
+      image.innerHTML += `<img src="img/${teamMembers[i][key]}" alt="img${i}"></img>`;
+    else if (key === 'nome')
+      caption.innerHTML += `<h3>${teamMembers[i][key]}</h2>`;
+    else caption.innerHTML += `${teamMembers[i][key]}`;
   }
+  member.append(image);
+  member.append(caption);
+  members.append(member);
 }
