@@ -41,7 +41,11 @@ const container = document.querySelector('.container');
 
 for (let i = 0; i < teamMembers.length; i++) {
   for (let key in teamMembers[i]) {
-    container.innerHTML += `${teamMembers[i][key]} `;
+    if (key === 'foto') {
+      container.innerHTML += `<img src="img/${teamMembers[i][key]}" alt=""></img>`;
+    } else {
+      container.innerHTML += `${teamMembers[i][key]} `;
+    }
+    container.innerHTML += '<br>';
   }
-  container.innerHTML += '<br>';
 }
