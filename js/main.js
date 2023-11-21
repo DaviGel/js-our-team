@@ -41,10 +41,10 @@ const members = document.querySelector('.members');
 const arrayLength = teamMembers.length;
 for (let i = 0; i < arrayLength; i++) {
   const member = document.createElement('div');
-  const image = document.createElement('div');
-  const caption = document.createElement('div');
   member.classList.add('member');
+  const image = document.createElement('div');
   image.classList.add('image');
+  const caption = document.createElement('div');
   caption.classList.add('caption');
   for (let key in teamMembers[i]) {
     if (key === 'foto')
