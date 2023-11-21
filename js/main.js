@@ -36,11 +36,13 @@ const teamMembers = [
 ];
 
 const members = document.querySelector('.members');
+const fragment = new DocumentFragment();
+let member;
 
 /* Program */
 const arrayLength = teamMembers.length;
 for (let i = 0; i < arrayLength; i++) {
-  const member = document.createElement('div');
+  member = document.createElement('div');
   member.classList.add('member');
   const image = document.createElement('div');
   image.classList.add('image');
@@ -55,5 +57,6 @@ for (let i = 0; i < arrayLength; i++) {
   }
   member.append(image);
   member.append(caption);
-  members.append(member);
+  fragment.append(member);
 }
+members.append(fragment);
