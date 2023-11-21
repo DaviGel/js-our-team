@@ -4,42 +4,42 @@
 
 const teamMembers = [
   {
-    foto: 'wayne-barnett-founder-ceo.jpg',
     nome: 'Wayne Barnett',
     ruolo: 'Founder & CEO',
+    foto: 'wayne-barnett-founder-ceo.jpg',
   },
   {
-    foto: 'angela-caroll-chief-editor.jpg',
     nome: 'Angela Caroll',
     ruolo: 'Chief Editor',
+    foto: 'angela-caroll-chief-editor.jpg',
   },
   {
-    foto: 'walter-gordon-office-manager.jpg',
     nome: 'Walter Gordon',
     ruolo: 'Office Manager',
+    foto: 'walter-gordon-office-manager.jpg',
   },
   {
-    foto: 'angela-lopez-social-media-manager.jpg',
     nome: 'Angela Lopez Gordon',
     ruolo: 'Social Media Manager',
+    foto: 'angela-lopez-social-media-manager.jpg',
   },
   {
-    foto: 'scott-estrada-developer.jpg',
     nome: 'Scott Estrada',
     ruolo: 'Developer',
+    foto: 'scott-estrada-developer.jpg',
   },
   {
-    foto: 'barbara-ramos-graphic-designer.jpg',
     nome: 'Barbara Ramos',
     ruolo: 'Graphic Designer',
+    foto: 'barbara-ramos-graphic-designer.jpg',
   },
 ];
 
 const members = document.querySelector('.members');
 
 /* Program */
-
-for (let i = 0; i < teamMembers.length; i++) {
+const arrayLength = teamMembers.length;
+for (let i = 0; i < arrayLength; i++) {
   const member = document.createElement('div');
   const image = document.createElement('div');
   const caption = document.createElement('div');
